@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ProductCard from './ProductCard';
+import { apiUrl } from '../api';
 import './Tailored.css';
 
 // Fallback products agar backend available na ho
@@ -108,7 +109,7 @@ const Tailored = () => {
     const loadProducts = async () => {
       try {
         const response = await fetch(
-          'https://adaa-clothing-production.up.railway.app/api/products'
+          apiUrl('/products')
         );
 
         if (!response.ok) {

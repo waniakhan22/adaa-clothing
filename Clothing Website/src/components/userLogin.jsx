@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { apiUrl } from "../api";
 import "./auth.css";
 
 const Login = () => {
@@ -32,7 +33,7 @@ const Login = () => {
       setError("");
 
       const response = await fetch(
-        "https://adaa-clothing-production.up.railway.app/api/auth/login",
+        apiUrl("/auth/login"),
         {
           method: "POST",
           headers: {

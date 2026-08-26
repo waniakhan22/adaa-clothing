@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { apiUrl } from "../api";
 import "./checkout.css";
 
 const Checkout = () => {
@@ -25,7 +26,7 @@ const Checkout = () => {
         return;
       }
 
-      const response = await fetch("https://adaa-clothing-production.up.railway.app/api/cart", {
+      const response = await fetch(apiUrl("/cart"), {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -74,7 +75,7 @@ const Checkout = () => {
         return;
       }
 
-      const response = await fetch("https://adaa-clothing-production.up.railway.app/api/orders", {
+      const response = await fetch(apiUrl("/orders"), {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

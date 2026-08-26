@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import ProductCard from './ProductCard';
+import { apiUrl } from '../api';
 import './Products.css';
 
 const Products = ({ category = 'all' }) => {
@@ -10,7 +11,7 @@ const Products = ({ category = 'all' }) => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch('https://adaa-clothing-production.up.railway.app/api/products');
+        const response = await fetch(apiUrl('/products'));
 
         const data = await response.json();
 if (data.success) {

@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { apiUrl } from "../api";
 import "./cart.css";
 
 const Cart = () => {
@@ -19,7 +20,7 @@ const Cart = () => {
         return;
       }
 
-      const response = await fetch("https://adaa-clothing-production.up.railway.app/api/cart", {
+      const response = await fetch(apiUrl("/cart"), {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -58,7 +59,7 @@ const Cart = () => {
     }
 
     const response = await fetch(
-      `https://adaa-clothing-production.up.railway.app/api/cart/${itemId}`,
+      apiUrl(`/cart/${itemId}`),
       {
         method: "PUT",
         headers: {
@@ -93,7 +94,7 @@ const Cart = () => {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        `https://adaa-clothing-production.up.railway.app/api/cart/${itemId}`,
+        apiUrl(`/cart/${itemId}`),
         {
           method: "DELETE",
           headers: {
@@ -126,7 +127,7 @@ const Cart = () => {
     try {
       const token = localStorage.getItem("token");
 
-      const response = await fetch("https://adaa-clothing-production.up.railway.app/api/cart", {
+      const response = await fetch(apiUrl("/cart"), {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,

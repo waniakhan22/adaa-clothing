@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ProductCard from './ProductCard';
+import { apiUrl } from '../api';
 import './Fabrics.css';
 
 const Fabrics = () => {
@@ -17,7 +18,7 @@ const Fabrics = () => {
     const fetchFabricsProducts = async () => {
       try {
         const response = await fetch(
-          'https://adaa-clothing-production.up.railway.app/api/products'
+          apiUrl('/products')
         );
 
         const data = await response.json();

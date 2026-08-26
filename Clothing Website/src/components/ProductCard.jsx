@@ -4,6 +4,7 @@ import {
   isInWishlist,
   toggleWishlist,
 } from "../wishlist";
+import { apiUrl } from "../api";
 
 const ProductCard = ({ product, category = "all" }) => {
   const [liked, setLiked] = useState(() => isInWishlist(product));
@@ -44,7 +45,7 @@ const ProductCard = ({ product, category = "all" }) => {
       setLoading(true);
 
       const response = await fetch(
-        "https://adaa-clothing-production.up.railway.app/api/cart/add",
+        apiUrl("/cart/add"),
         {
           method: "POST",
           headers: {

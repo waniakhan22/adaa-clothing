@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { apiUrl } from "../api";
 import "./auth.css";
 
 const Signup = () => {
@@ -55,7 +56,7 @@ const Signup = () => {
       setError("");
 
       const response = await fetch(
-        "https://adaa-clothing-production.up.railway.app/api/auth/register",
+        apiUrl("/auth/register"),
         {
           method: "POST",
           headers: {

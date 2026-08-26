@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ProductCard from "./ProductCard";
+import { apiUrl } from "../api";
 import "./search.css";
 
 const Search = () => {
@@ -42,7 +43,7 @@ const Search = () => {
         setLoading(true);
 
         const response = await fetch(
-          "https://adaa-clothing-production.up.railway.app/api/products"
+          apiUrl("/products")
         );
 
         const data = await response.json();

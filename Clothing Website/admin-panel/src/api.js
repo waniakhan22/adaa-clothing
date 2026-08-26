@@ -1,4 +1,6 @@
-const API_URL = import.meta.env.VITE_API_URL || 'https://adaa-clothing-production.up.railway.app';
+const API_URL = (import.meta.env.VITE_API_URL || 'https://adaa-clothing-production-9222.up.railway.app')
+  .replace(/\/api\/?$/, '')
+  .replace(/\/$/, '');
 
 export const apiRequest = async (path, options = {}) => {
   const token = localStorage.getItem('token');

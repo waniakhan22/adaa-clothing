@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ProductCard from './ProductCard';
+import { apiUrl } from '../api';
 import './Hero.css';
 
 const Hero = () => {
@@ -26,7 +27,7 @@ const Hero = () => {
     const fetchTopPicks = async () => {
       try {
         const response = await fetch(
-          'https://adaa-clothing-production.up.railway.app/api/products'
+          apiUrl('/products')
         );
 
         const data = await response.json();
