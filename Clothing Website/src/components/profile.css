@@ -1,0 +1,178 @@
+/* ================================
+   ADAA PROFILE PAGE
+================================ */
+
+.profile-page {
+  min-height: 100vh;
+  background: #f8f7f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 20px 80px;
+  box-sizing: border-box;
+}
+
+.profile-container {
+  width: 100%;
+  max-width: 620px;
+  text-align: center;
+}
+
+/* Profile Icon */
+
+.profile-icon-large {
+  width: 86px;
+  height: 86px;
+  margin: 0 auto 28px;
+
+  border: 1px solid #222;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff;
+}
+
+.profile-icon-large svg {
+  width: 42px;
+  height: 42px;
+  color: #222;
+}
+
+/* Heading */
+
+.profile-eyebrow {
+  margin: 0 0 14px;
+
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #888;
+  text-transform: uppercase;
+}
+
+.profile-container h1 {
+  margin: 0;
+
+  font-size: clamp(42px, 6vw, 64px);
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: -2px;
+  color: #171717;
+}
+
+.profile-email {
+  margin: 16px 0 45px;
+
+  font-size: 13px;
+  color: #777;
+  letter-spacing: 0.5px;
+}
+
+/* Options */
+
+.profile-options {
+  border-top: 1px solid #222;
+  margin-top: 20px;
+}
+
+.profile-options button {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 23px 5px;
+
+  border: none;
+  border-bottom: 1px solid #d5d5d5;
+
+  background: transparent;
+
+  font-family: inherit;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  color: #222;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.profile-options button:hover {
+  padding-left: 12px;
+  padding-right: 12px;
+  background: #efeee9;
+}
+
+.profile-options button span:last-child {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.profile-options button:hover span:last-child {
+  transform: translateX(5px);
+}
+
+/* Logout */
+
+.profile-logout {
+  margin-top: 45px;
+
+  padding: 15px 35px;
+
+  border: 1px solid #222;
+
+  background: #222;
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 10px;
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.profile-logout:hover {
+  background: transparent;
+  color: #222;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .profile-page {
+    padding: 100px 25px 60px;
+  }
+
+  .profile-icon-large {
+    width: 75px;
+    height: 75px;
+  }
+
+  .profile-icon-large svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .profile-container h1 {
+    font-size: 44px;
+  }
+
+  .profile-email {
+    margin-bottom: 35px;
+  }
+
+  .profile-options button {
+    padding: 20px 3px;
+  }
+
+}

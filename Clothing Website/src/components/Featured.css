@@ -1,0 +1,120 @@
+.featured-section {
+  position: relative;
+  height: clamp(70vh, 80vw, 85vh);
+  display: flex;
+  align-items: center;
+  margin: 8rem 0;
+  overflow: hidden;
+  border-radius: 32px;
+  box-shadow: var(--shadow-lg);
+}
+
+.featured-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.4) contrast(1.15);
+  z-index: -1;
+}
+
+.featured-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+    rgba(26, 26, 26, 0.7) 0%,
+    rgba(212, 175, 55, 0.15) 30%,
+    rgba(26, 26, 26, 0.85) 70%,
+    rgba(0,0,0,0.95) 100%
+  );
+}
+
+.featured-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.featured-text {
+  max-width: 650px;
+  color: var(--white);
+}
+
+.featured-badge {
+  display: inline-flex;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.1));
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: var(--white);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  animation: badgeFloat 3s ease-in-out infinite;
+}
+
+@keyframes badgeFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.featured-title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 800;
+  margin-bottom: 2rem;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  text-shadow: 0 12px 48px rgba(0,0,0,0.7);
+}
+
+.featured-desc {
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  margin-bottom: 4rem;
+  line-height: 1.6;
+  opacity: 0.95;
+  font-weight: 300;
+  max-width: 550px;
+}
+
+.featured-buttons {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .featured-content {
+    padding: 0 2.5rem;
+    text-align: center;
+  }
+  
+  .featured-buttons {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .featured-section {
+    margin: 5rem -1rem;
+    border-radius: 0;
+  }
+  
+  .featured-content {
+    padding: 0 1.5rem;
+  }
+  
+  .featured-title {
+    margin-bottom: 1.5rem;
+  }
+}
+
