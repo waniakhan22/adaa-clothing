@@ -55,7 +55,7 @@ const Signup = () => {
       setError("");
 
       const response = await fetch(
-        "http://localhost:3000/api/auth/register",
+        "https://adaa-clothing-production.up.railway.app/api/auth/register",
         {
           method: "POST",
           headers: {

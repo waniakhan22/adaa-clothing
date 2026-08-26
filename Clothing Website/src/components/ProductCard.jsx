@@ -44,7 +44,7 @@ const ProductCard = ({ product, category = "all" }) => {
       setLoading(true);
 
       const response = await fetch(
-        "http://localhost:3000/api/cart/add",
+        "https://adaa-clothing-production.up.railway.app/api/cart/add",
         {
           method: "POST",
           headers: {

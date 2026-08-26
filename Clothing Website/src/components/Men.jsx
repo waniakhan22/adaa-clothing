@@ -14,7 +14,7 @@ const Men = () => {
     const fetchMenProducts = async () => {
       try {
         const response = await fetch(
-          "http://localhost:3000/api/products"
+          "https://adaa-clothing-production.up.railway.app/api/products"
         );
 
         const data = await response.json();

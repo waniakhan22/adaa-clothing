@@ -19,7 +19,7 @@ const Cart = () => {
         return;
       }
 
-      const response = await fetch("http://localhost:3000/api/cart", {
+      const response = await fetch("https://adaa-clothing-production.up.railway.app/api/cart", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -58,7 +58,7 @@ const Cart = () => {
     }
 
     const response = await fetch(
-      `http://localhost:3000/api/cart/${itemId}`,
+      `https://adaa-clothing-production.up.railway.app/api/cart/${itemId}`,
       {
         method: "PUT",
         headers: {
@@ -93,7 +93,7 @@ const Cart = () => {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:3000/api/cart/${itemId}`,
+        `https://adaa-clothing-production.up.railway.app/api/cart/${itemId}`,
         {
           method: "DELETE",
           headers: {
@@ -126,7 +126,7 @@ const Cart = () => {
     try {
       const token = localStorage.getItem("token");
 
-      const response = await fetch("http://localhost:3000/api/cart", {
+      const response = await fetch("https://adaa-clothing-production.up.railway.app/api/cart", {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
